@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="parallax.css">
+    <title>parallax effects with vanilla javascript</title>
+</head>
+<body>
+    <section class="zoom">
+    <img src="mountain1.png " id="layer1">
+    <img src="mountain2.png" id="layer2">
+    <img src="text.png" id="text">
+    </section>
+    <section class="content">
+        <h2>simple background parallax effect with javascript</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique expedita eligendi quam in officia sit culpa deleniti 
+        vero dolorem quisquam soluta, debitis dolores quod veritatis ratione, illo a sunt mollitia.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique expedita eligendi quam in officia sit culpa deleniti 
+        vero dolorem quisquam soluta, debitis dolores quod veritatis ratione, illo a sunt mollitia.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique expedita eligendi quam in officia sit culpa deleniti 
+        vero dolorem quisquam soluta, debitis dolores quod veritatis ratione, illo a sunt mollitia.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique expedita eligendi quam in officia sit culpa deleniti 
+        vero dolorem quisquam soluta, debitis dolores quod veritatis ratione, illo a sunt mollitia.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique expedita eligendi quam in officia sit culpa deleniti 
+        vero dolorem quisquam soluta, debitis dolores quod veritatis ratione, illo a sunt mollitia.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique expedita eligendi quam in officia sit culpa deleniti 
+        vero dolorem quisquam soluta, debitis dolores quod veritatis ratione, illo a sunt mollitia.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique expedita eligendi quam in officia sit culpa deleniti 
+        vero dolorem quisquam soluta, debitis dolores quod veritatis ratione, illo a sunt mollitia.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique expedita eligendi quam in officia sit culpa deleniti 
+        vero dolorem quisquam soluta, debitis dolores quod veritatis ratione, illo a sunt mollitia.<br> ipsum dolor sit, amet consectetur adipisicing elit. Similique expedita eligendi quam in officia sit culpa deleniti 
+        vero dolorem quisquam soluta, debitis dolores quod veritatis ratione, illo a sunt mollitia.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique expedita eligendi quam in officia sit culpa deleniti 
+        vero dolorem quisquam soluta, debitis dolores quod veritatis ratione, illo a sunt mollitia.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique expedita eligendi quam in officia sit culpa deleniti 
+        vero dolorem quisquam soluta, debitis dolores quod veritatis ratione, illo a sunt mollitia.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique expedita eligendi quam in officia sit culpa deleniti 
+        vero dolorem quisquam soluta, debitis dolores quod veritatis ratione, illo a sunt mollitia.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique expedita eligendi quam in officia sit culpa deleniti 
+        vero dolorem quisquam soluta, debitis dolores quod veritatis ratione, illo a sunt mollitia.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique expedita eligendi quam in officia sit culpa deleniti 
+        vero dolorem quisquam soluta, debitis dolores quod veritatis ratione, illo a sunt mollitia.<br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique expedita eligendi quam in officia sit culpa deleniti 
+        vero dolorem quisquam soluta, debitis dolores quod veritatis ratione, illo a sunt mollitia.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique expedita eligendi quam in officia sit culpa deleniti 
+        vero dolorem quisquam soluta, debitis dolores quod veritatis ratione, illo a sunt mollitia.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique expedita eligendi quam in officia sit culpa deleniti 
+        vero dolorem quisquam soluta, debitis dolores quod veritatis ratione, illo a sunt mollitia.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique expedita eligendi quam in officia sit culpa deleniti 
+        vero dolorem quisquam soluta, debitis dolores quod veritatis ratione, illo a sunt mollitia.</p>
+
+    </section>
+    <script type="text/javascript">
+       var layer1 = document.getElementById('layer1')
+       scroll = window.pageYOffset;
+       document.addEventListener('scroll',
+       function (e)
+       {
+      var offset = window.pageYOffset;
+      scroll = offset;
+      layer1.style.width = (100 + scroll/5) + '%'
+       }
+       );
+       var layer2 = document.getElementById('layer2')
+       scroll = window.pageYOffset;
+       document.addEventListener('scroll',
+       function (e)
+       {
+      var offset = window.pageYOffset;
+      scroll = offset;
+      layer2.style.width = (100 + scroll/5) + '%'
+      layer2.style.left = scroll/50 + '%'
+       }
+       );
+       var text = document.getElementById('text')
+       scroll = window.pageYOffset;
+       document.addEventListener('scroll',
+       function (e)
+       {
+      var offset = window.pageYOffset;
+      scroll = offset;
+      layer2.style.width = (100 + scroll/5) + '%'
+      text.top = - scroll/50 + '%'
+       }
+       );
+
+ 
+    </script>
+</body>
+</html>
